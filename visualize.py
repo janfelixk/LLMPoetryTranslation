@@ -13,7 +13,7 @@ plt.rcParams.update({'ytick.labelsize': 15})
 def get_mean(v, x):
     return np.mean(v)
 
-filenames = ["results_human.csv"] # names of files containing the results
+filenames = ["results_exp1_human.csv"] # names of files containing the results
 
 tags = ["deepl","george","tieck","regis","wolff","walesrode"] # the tags of the relevant conditions in the result files
 markers = ["o","o","o","o","o","o"] # markers (for average values)
@@ -25,7 +25,7 @@ plot_besides = True # plot metre and rhyme next to each other
 results = []
 for fn in filenames:
     for l in csv.reader(open(f"{fn}","r")):
-        if 'None' not in l: # unless one of the metrics is undefined
+        if 'None' not in l and 'no' not in l: # unless one of the metrics is undefined or the line is the header
             results.append([l[0], int(l[1]), float(l[2]), float(l[3]), float(l[4])])
 # convert to dictionary
 data = {} # dictionary with lists of triples as values: key: tag, value: [(Bert score, metre, rhyme)]
