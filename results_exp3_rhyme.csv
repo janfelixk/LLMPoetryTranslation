@@ -1,3 +1,4 @@
+translator,no,bertscore,rhymeSchemeSimilarityPrecision,rhymeSchemeSimilarityRecall,rhymeSchemeSimilarityF1
 30_dense_deepl,0,0.9201635362948224,0.0,1.0,0.0
 30_dense_deepl,1,0.9520256957732931,0.0,1.0,0.0
 30_dense_deepl,2,0.949390860146578,0.0,1.0,0.0
