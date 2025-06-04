@@ -25,7 +25,7 @@ plot_besides = True # plot metre and rhyme next to each other
 results = []
 for fn in filenames:
     for l in csv.reader(open(f"{fn}","r")):
-        if 'None' not in l and 'no' not in l: # unless one of the metrics is undefined or the line is the header
+        if 'None' not in l and 'translator' not in l: # unless one of the metrics is undefined or the line is the header
             results.append([l[0], int(l[1]), float(l[2]), float(l[3]), float(l[4])])
 # convert to dictionary
 data = {} # dictionary with lists of triples as values: key: tag, value: [(Bert score, metre, rhyme)]
